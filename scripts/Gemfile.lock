@@ -4,7 +4,12 @@ GEM
     Ascii85 (1.0.3)
     afm (0.2.2)
     hashery (2.1.2)
-    pdf-reader (1.4.0)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.6)
+    multi_xml (0.6.0)
+    pdf-reader (1.4.1)
       Ascii85 (~> 1.0.0)
       afm (~> 0.2.1)
       hashery (~> 2.0)
@@ -17,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  httparty (~> 0.13.7)
   pdf-reader (~> 1.4)
 
 BUNDLED WITH
