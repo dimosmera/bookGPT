@@ -1,10 +1,9 @@
 require_relative 'extract_chunks'
+require_relative 'OpenAI'
+
+openai_api = OpenAI.new
 
 chunks = extract_chunks
 
-chunks.each do |chunk|
-  puts '---------------------'
-
-  puts chunk
-  puts "chunk tokens: #{count_tokens(chunk)}"
-end
+embeddings = openai_api.embeddings(chunks)
+puts "embeddings: #{embeddings}"
