@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+pids
+*.pid
+*.seed
+*.pid.lock
+
+.nyc_output
+
+coverage
+
+node_modules/
+
+.vscode
+
+.DS_Store
+
+# Serverless directories
+.serverless/
+.serverless-test
+
+env.json
+
+# Buy data
+data/flow.yml
+data/sol.yml
+data/btc.yml
+data/eth.yml
+data/link.yml
+data/matic.yml
+data/avax.yml
+data/near.yml
+data/algo.yml

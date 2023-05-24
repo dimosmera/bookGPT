@@ -1,0 +1,13 @@
+{
+  "name": "bookgpt-backend",
+  "description": "Fetches book embeddings and using the most relevant, serves the user's query",
+  "author": "Dimos Merachtsakis",
+  "version": "0.1.0",
+  "license": "GPL-3.0",
+  "scripts": {
+    "deploy": "serverless deploy --verbose"
+  },
+  "devDependencies": {
+    "serverless-ruby-layer": "^1.6.0"
+  }
+}
