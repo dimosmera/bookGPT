@@ -2,7 +2,7 @@ require 'pdf-reader'
 
 require_relative 'count_tokens'
 
-CHUNK_SIZE = 8192
+CHUNK_SIZE = 5097
 
 # Splits a PDF into chunks so we can compute embeddings for each
 def extract_chunks
