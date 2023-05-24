@@ -1,5 +1,7 @@
 ## Setup
 
+### Generating embeddings
+
 First, you need to generate embeddings for your PDF.
 
 1. `cd scripts`
@@ -21,3 +23,36 @@ ruby pdf_to_embeddings.rb
 ```
 
 Note: Make sure to `cd` into the `scripts` directory before running the script.
+
+### Deploying the API
+
+The backend accepts a question and returns the answer. It's a serverless lambda that runs on AWS.
+
+1. Install the [Serverless Framework](https://www.serverless.com/framework/docs/getting-started)
+
+If you haven't already, you'll need to [set up your AWS credentials](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/).
+
+2. Deploy the API:
+
+```
+cd backend
+npm run deploy
+```
+
+### Hosting the frontend
+
+The frontend is written with React and Next.js. You can host it anywhere you like. I prefer [Vercel](https://vercel.com/dashboard).
+
+To run locally, `cd frontend` and:
+
+1. Fetch dependencies:
+
+```
+yarn or npm install
+```
+
+2. Run the development server:
+
+```
+ yarn dev or npm run dev
+```
