@@ -2,7 +2,7 @@ require 'httparty'
 
 require_relative '../environment'
 
-# Returns an array of embedding vectors
+# Returns an array of embedding vectors using OpenAI API
 def generate_embeddings(text)
   body = {
     'input' => text,
