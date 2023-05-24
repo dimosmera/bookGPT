@@ -1,2 +1,3 @@
-# Copy this file to environment.rb and change the OPENAI_API_KEY
+# Copy this file to environment.rb and change OPENAI_API_KEY and PDF_BOOK
 ENV['OPENAI_API_KEY'] = 'your_key'
+ENV['PDF_BOOK'] = 'file.pdf'

@@ -1,12 +1,13 @@
 require 'pdf-reader'
 
 require_relative 'count_tokens'
+require_relative '../environment'
 
 CHUNK_SIZE = 5097
 
 # Splits a PDF into chunks so we can compute embeddings for each
 def extract_chunks
-  reader = PDF::Reader.new('./file.pdf')
+  reader = PDF::Reader.new("./#{ENV['PDF_BOOK']}")
 
   chunk = ''
   chunks = []
