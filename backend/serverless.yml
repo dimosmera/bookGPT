@@ -10,8 +10,13 @@ provider:
   region: eu-west-2
 
 functions:
-  hello:
-    handler: handler.hello
+  ask:
+    handler: app/handler.ask
+    events:
+      - http:
+          path: /ask
+          method: GET
+          cors: true
 
 plugins:
   - serverless-ruby-layer
