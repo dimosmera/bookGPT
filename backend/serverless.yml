@@ -12,6 +12,9 @@ provider:
 functions:
   ask:
     handler: app/handler.ask
+    package:
+      patterns:
+        - embeddings/*.csv
     events:
       - http:
           path: /ask
