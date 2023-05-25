@@ -42,10 +42,13 @@ def ask(event:, context:)
   puts strings.first
   puts relatednesses.first
 
+  answer = openai_api.completions(user_query, strings.first)
+  puts answer
+
   {
     statusCode: 200,
     body: {
-      message: 'Go Serverless v1.0! Your function executed successfully!'
+      message: answer
     }.to_json
   }
 end
