@@ -12,6 +12,7 @@ provider:
 functions:
   ask:
     handler: app/handler.ask
+    environment: ${file(env.json)}
     package:
       patterns:
         - embeddings/*.csv
