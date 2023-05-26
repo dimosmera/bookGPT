@@ -14,3 +14,10 @@
 
   line-height: 1.75;
 }
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: white;
+    color: black;
+  }
+}
