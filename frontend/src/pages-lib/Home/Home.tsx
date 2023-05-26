@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 import AppHead from "components/AppHead";
-import Input from "components/Input/Input";
+import Input from "components/Input";
+import AskButton from "components/AskButton";
 
 import styles from "./Home.module.css";
 
@@ -30,6 +31,8 @@ const Home = () => {
           </p>
 
           <Input />
+
+          <AskButton />
         </div>
 
         <div className={styles.footer}>
