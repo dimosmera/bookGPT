@@ -1,0 +1,17 @@
+.input {
+  width: 100%;
+
+  color: inherit;
+
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px 12px;
+
+  font-family: inherit;
+  font-size: 18px;
+
+  line-height: 1.75;
+
+  margin-top: 2rem;
+}

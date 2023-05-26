@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import AppHead from "components/AppHead";
+import Input from "components/Input/Input";
 
 import styles from "./Home.module.css";
 
@@ -27,6 +28,8 @@ const Home = () => {
               'The AI is trained on a short story by Harlan Ellison, "I Have No Mouth, and I Must Scream". Ask a question about this story and it will answer it in real-time:'
             }
           </p>
+
+          <Input />
         </div>
 
         <div className={styles.footer}>
