@@ -3,7 +3,7 @@ import NextHead from "next/head";
 const AppHead = () => {
   return (
     <NextHead>
-      <title>Ask a book</title>
+      <title>Ask A Book</title>
       <meta
         name="description"
         content="Ask questions to a book. Powered by ChatGPT"
