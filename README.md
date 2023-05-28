@@ -4,6 +4,8 @@ Using OpenAI's APIs (embeddings and GPT-3), we can search through large PDFs and
 
 The results remind me of The Librarian from [Snow Crash](https://en.wikipedia.org/wiki/Snow_Crash) - an AI-powered super-machine that lives in a library capable of accessing and summarising large quantities of text.
 
+Try it out [here](https://book-gpt-pied.vercel.app/)
+
 ## Setup
 
 ### Generating embeddings
