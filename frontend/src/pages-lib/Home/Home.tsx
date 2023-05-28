@@ -3,6 +3,7 @@ import Image from "next/image";
 import AppHead from "components/AppHead";
 import Input from "components/Input";
 import AskButton from "components/AskButton";
+import Answer from "components/Answer";
 
 import styles from "./Home.module.css";
 
@@ -31,6 +32,8 @@ const Home = () => {
           </p>
 
           <Input />
+
+          <Answer />
 
           <AskButton />
         </div>
