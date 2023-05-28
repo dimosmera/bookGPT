@@ -2,7 +2,7 @@ import axios from "axios";
 
 const http = () =>
   axios.create({
-    timeout: 20_000,
+    timeout: 30_000,
     headers: {
       "Content-Type": "application/json",
     },

@@ -13,7 +13,7 @@ functions:
   ask:
     handler: app/handler.ask
     environment: ${file(env.json)}
-    timeout: 24
+    timeout: 30
     package:
       patterns:
         - embeddings/*.csv
