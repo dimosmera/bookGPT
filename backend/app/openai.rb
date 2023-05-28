@@ -41,7 +41,7 @@ class OpenAI
       'messages' => [
         {
           'role' => 'system',
-          'content' => "You are a helpful assistant that accurately answers queries on a short story called 'I Have No Mouth, and I Must Scream' by Harlan Ellison. Use the text provided to form your answer. Be accurate, helpful, concise, and clear."
+          'content' => 'You are a helpful assistant that accurately answers queries based on the text provided. Use this text to form your answer. Be accurate, helpful, concise, and clear.'
         },
         { 'role' => 'user', 'content' => context },
         { 'role' => 'user', 'content' => query }
