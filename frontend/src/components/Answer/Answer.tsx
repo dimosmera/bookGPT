@@ -7,6 +7,8 @@ const Answer = () => {
 
   const { answer } = state;
 
+  if (!answer) return null;
+
   return (
     <div className={styles.container}>
       <p>

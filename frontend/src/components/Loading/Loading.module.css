@@ -1,0 +1,14 @@
+.container {
+  color: black;
+  background: lightgray;
+
+  margin-top: 2rem;
+  width: auto;
+  padding: 8px 18px;
+
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  font-size: 18px;
+
+  line-height: 1.75;
+}
