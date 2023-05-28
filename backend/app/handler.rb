@@ -4,6 +4,7 @@ require 'json'
 
 require_relative 'openai'
 require_relative 'utils/cosine_similarity'
+require_relative 'utils/slack'
 
 def ask(event:, context:)
   request_body = JSON.parse(event['body'])
@@ -19,11 +20,11 @@ def ask(event:, context:)
   puts user_query
 
   openai_api = OpenAI.new
+  slack_api = SlackAPI.new
 
   # Generates embeddings for the user query
   user_query_embeddings = openai_api.embeddings(user_query)
   query_embedding = Vector.elements(user_query_embeddings[0]['embedding'])
-  puts query_embedding
 
   # Relates each embedding from the CSV with the user query one
   strings_and_relatednesses = embeddings_from_csv.map do |embedding|
@@ -38,15 +39,14 @@ def ask(event:, context:)
   strings = sorted_strings_and_relatednesses.map(&:first)
   relatednesses = sorted_strings_and_relatednesses.map(&:last)
 
-  relatednesses.each do |rel|
-    puts rel
-  end
-
   puts strings.first
   puts relatednesses.first
 
   answer = openai_api.completions(user_query, strings.first)
   puts answer
+
+  # Posts to slack when someone engages with the app. You can remove this if you want
+  slack_api.post_to_slack("Someone asked '#{user_query}'")
 
   {
     statusCode: 200,
