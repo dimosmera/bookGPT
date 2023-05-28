@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const http = (timeout?: number) =>
+const http = () =>
   axios.create({
-    timeout: timeout || 15000,
+    timeout: 20_000,
     headers: {
       "Content-Type": "application/json",
     },
