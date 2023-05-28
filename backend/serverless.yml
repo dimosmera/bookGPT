@@ -20,7 +20,7 @@ functions:
     events:
       - http:
           path: /ask
-          method: GET
+          method: POST
           cors: true
 
 plugins:

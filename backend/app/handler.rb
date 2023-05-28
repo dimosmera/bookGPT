@@ -1,10 +1,13 @@
 require 'matrix'
 require 'csv'
+require 'json'
 
 require_relative 'openai'
 require_relative 'utils/cosine_similarity'
 
 def ask(event:, context:)
+  request_body = JSON.parse(event['body'])
+
   embeddings_from_csv = []
 
   # Reads the local CSV file
@@ -12,8 +15,8 @@ def ask(event:, context:)
     embeddings_from_csv << { text: row[:content], embedding: row[:embedding] }
   end
 
-  # TODO: Get this from the frontend
-  user_query = 'How are the humans tortured?'
+  user_query = request_body['question']
+  puts user_query
 
   openai_api = OpenAI.new
 
@@ -47,8 +50,12 @@ def ask(event:, context:)
 
   {
     statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    },
     body: {
-      message: answer
+      answer: answer
     }.to_json
   }
 end
